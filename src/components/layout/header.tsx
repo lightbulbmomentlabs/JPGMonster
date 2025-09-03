@@ -17,8 +17,25 @@ export function Header() {
           </span>
         </Link>
         
-        <nav className="hidden">
-          {/* Navigation links removed for mobile optimization */}
+        <nav className="hidden md:flex items-center space-x-6">
+          <Link 
+            href="/#how-it-works" 
+            className="text-sm font-medium text-gray-600 hover:text-monster-primary transition-colors"
+          >
+            How It Works
+          </Link>
+          <Link 
+            href="/#features" 
+            className="text-sm font-medium text-gray-600 hover:text-monster-primary transition-colors"
+          >
+            Features
+          </Link>
+          <Link 
+            href="/about" 
+            className="text-sm font-medium text-gray-600 hover:text-monster-primary transition-colors"
+          >
+            About
+          </Link>
         </nav>
       </div>
     </header>
