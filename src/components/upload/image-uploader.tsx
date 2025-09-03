@@ -215,7 +215,7 @@ export function ImageUploader({
 
   const uploadZoneStyle = integrated 
     ? `
-      relative border-3 border-dotted rounded-xl p-8 md:p-12 text-center cursor-pointer 
+      relative border-3 border-dotted rounded-xl p-4 sm:p-6 md:p-8 text-center cursor-pointer 
       transition-all duration-300 ease-out
       bg-gradient-to-br from-blue-50/60 to-purple-50/60 backdrop-blur-sm border-purple-500
       hover:border-purple-600 hover:bg-gradient-to-br hover:from-blue-50/80 hover:to-purple-50/80 hover:shadow-xl hover:scale-[1.02]
@@ -227,7 +227,7 @@ export function ImageUploader({
       ${isProcessing ? 'pointer-events-none opacity-50' : ''}
     `
     : `
-      relative border-3 border-dotted rounded-lg p-12 text-center cursor-pointer 
+      relative border-3 border-dotted rounded-lg p-6 sm:p-8 md:p-12 text-center cursor-pointer 
       transition-all duration-300 ease-out
       bg-gradient-to-br from-blue-50/40 to-purple-50/40 border-purple-500
       hover:border-purple-600 hover:bg-gradient-to-br hover:from-blue-50/60 hover:to-purple-50/60 hover:scale-[1.01] hover:shadow-lg

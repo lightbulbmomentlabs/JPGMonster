@@ -43,7 +43,7 @@ export function HeroSection() {
   };
 
   return (
-    <section className="relative bg-gradient-to-br from-blue-50 to-purple-50 py-20 px-4">
+    <section className="relative bg-gradient-to-br from-blue-50 to-purple-50 py-20 px-2 sm:px-4">
       <div className="container mx-auto max-w-7xl">
         <div className="flex justify-center items-start gap-8">
           
@@ -75,7 +75,7 @@ export function HeroSection() {
             </h1>
 
             {/* Upload Area */}
-            <div className="max-w-2xl mx-auto mb-12 animate-in slide-in-from-bottom duration-700 delay-200">
+            <div className="max-w-4xl mx-auto mb-12 animate-in slide-in-from-bottom duration-700 delay-200">
               <ImageUploader 
                 integrated={true}
                 onProcessingStart={handleProcessingStart}
