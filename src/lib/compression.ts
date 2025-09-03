@@ -164,7 +164,7 @@ export async function smartCompressImage(
   // Iterative optimization
   while (attempt < maxAttempts) {
     try {
-      const compressionOptions: imageCompression.Options = {
+      const compressionOptions = {
         maxSizeMB: Infinity,
         maxWidthOrHeight: Math.max(currentWidth, currentHeight),
         useWebWorker: true,
@@ -227,7 +227,7 @@ export async function compressImage(
     return smartCompressImage(file, options, onProgress);
   }
 
-  const compressionOptions: imageCompression.Options = {
+  const compressionOptions = {
     maxSizeMB: Infinity,
     maxWidthOrHeight: options.maxWidth || options.maxHeight || undefined,
     useWebWorker: true,

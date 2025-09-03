@@ -45,10 +45,6 @@ export function ImageProcessor({
     if (preset) {
       setSelectedPreset(presetName);
       
-      // Calculate the new quality range for this preset
-      const baseQuality = preset.quality * 100;
-      const range = 15; // ±15% range
-      
       // Always set to the preset's default quality for clear user feedback
       const newQuality = preset.quality;
       
