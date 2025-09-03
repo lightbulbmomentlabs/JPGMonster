@@ -27,9 +27,13 @@ export const metadata: Metadata = {
   publisher: 'JPGMonster',
   metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || 'https://jpgmonster.com'),
   icons: {
-    icon: 'https://yxmgdkcvglytfkklfutp.supabase.co/storage/v1/object/public/website-assets/JPG-Monster-Icon-Sml.png',
-    shortcut: 'https://yxmgdkcvglytfkklfutp.supabase.co/storage/v1/object/public/website-assets/JPG-Monster-Icon-Sml.png',
-    apple: 'https://yxmgdkcvglytfkklfutp.supabase.co/storage/v1/object/public/website-assets/JPG-Monster-Icon-Sml.png',
+    icon: [
+      { url: '/icon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/icon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon.ico', sizes: 'any' }
+    ],
+    shortcut: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
   },
   alternates: {
     canonical: '/',
