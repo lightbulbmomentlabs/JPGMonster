@@ -7,7 +7,7 @@ import { AdUnit } from '@/components/ads/ad-unit';
 
 export function HeroSection() {
   const [processedImages, setProcessedImages] = useState<ProcessedImage[]>([]);
-  const [isProcessing, setIsProcessing] = useState(false);
+  const [, setIsProcessing] = useState(false);
 
   const hasResults = processedImages.length > 0;
 
@@ -69,7 +69,7 @@ export function HeroSection() {
                   <span className="monster-gradient-text">
                     JPGs Are Too Fat
                   </span>
-                  . Feed 'Em to the Monster.
+                  . Feed &apos;Em to the Monster.
                 </>
               )}
             </h1>
@@ -86,8 +86,8 @@ export function HeroSection() {
 
             {/* Subheading */}
             <p className="mb-10 text-lg text-gray-600 sm:text-xl max-w-3xl mx-auto animate-in fade-in duration-1000 delay-500">
-              Compress JPGs online faster than you can say "PageSpeed penalty." No logins. No nonsense. 
-              Just a hungry little monster who chews through file sizes like it's leg day.
+              Compress JPGs online faster than you can say &quot;PageSpeed penalty.&quot; No logins. No nonsense. 
+              Just a hungry little monster who chews through file sizes like it&apos;s leg day.
             </p>
           </div>
 

@@ -288,8 +288,8 @@ export async function generateThumbnail(file: File, maxWidth: number = 64): Prom
         const { width: originalWidth, height: originalHeight } = img;
         const aspectRatio = originalWidth / originalHeight;
         
-        let thumbnailWidth = Math.min(originalWidth, maxWidth);
-        let thumbnailHeight = thumbnailWidth / aspectRatio;
+        const thumbnailWidth = Math.min(originalWidth, maxWidth);
+        const thumbnailHeight = thumbnailWidth / aspectRatio;
         
         // Set canvas dimensions
         canvas.width = thumbnailWidth;

@@ -50,7 +50,7 @@ export function UseCasesSection() {
             For:
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Whether you're a developer, designer, blogger, or just someone who cares about web performance
+            Whether you&apos;re a developer, designer, blogger, or just someone who cares about web performance
           </p>
         </div>
 

@@ -45,7 +45,7 @@ export function WhyJPGmonsterSection() {
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-5xl font-heading font-semibold text-gray-900 mb-6">
-            Why JPGmonster is the Internet's Favorite{' '}
+            Why JPGmonster is the Internet&apos;s Favorite{' '}
             <span className="monster-gradient-text">
               Compression Beast
             </span>

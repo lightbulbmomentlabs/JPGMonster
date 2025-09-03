@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Settings, Download, RotateCcw } from 'lucide-react';
 import { Slider } from '@/components/ui/slider';
 import { Button } from '@/components/ui/button';
@@ -48,8 +48,6 @@ export function ImageProcessor({
       // Calculate the new quality range for this preset
       const baseQuality = preset.quality * 100;
       const range = 15; // ±15% range
-      const min = Math.max(Math.round(baseQuality - range), 40);
-      const max = Math.min(Math.round(baseQuality + range), 95);
       
       // Always set to the preset's default quality for clear user feedback
       const newQuality = preset.quality;
@@ -412,7 +410,7 @@ export function ImageProcessor({
 
         {/* Individual Results */}
         <div className="space-y-6">
-          {processedImages.map((image, index) => (
+          {processedImages.map((image) => (
             <ImageComparison 
               key={image.id}
               image={image}

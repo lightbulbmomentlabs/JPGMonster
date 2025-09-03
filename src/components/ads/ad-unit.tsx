@@ -30,7 +30,7 @@ const DEFAULT_AD_SLOTS = {
 
 declare global {
   interface Window {
-    adsbygoogle: any[];
+    adsbygoogle: Record<string, unknown>[];
   }
 }
 

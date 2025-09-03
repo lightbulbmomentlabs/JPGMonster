@@ -48,7 +48,7 @@ export function PerformanceSection() {
             </span>
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            JPGmonster isn't just fast—it's built to make your entire website faster
+            JPGmonster isn&apos;t just fast—it&apos;s built to make your entire website faster
           </p>
         </div>
 
