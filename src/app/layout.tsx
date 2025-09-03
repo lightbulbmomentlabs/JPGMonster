@@ -36,15 +36,15 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'JPGMonster - Free JPG Optimizer',
-    description: 'Optimize your JPGs for your website in a fast, fun, and free way',
+    description: 'Optimize your JPGs for your website in a fast, fun, and free way. Compress JPEG images instantly with our monster-powered tool.',
     url: '/',
     siteName: 'JPGMonster',
     images: [
       {
-        url: '/og-image.png',
+        url: 'https://yxmgdkcvglytfkklfutp.supabase.co/storage/v1/object/public/website-assets/JPGMonster-Feat-Image-FB.jpg',
         width: 1200,
         height: 630,
-        alt: 'JPGMonster - Free JPG Optimizer',
+        alt: 'JPGMonster - Free JPG Optimizer - Compress your images instantly',
       },
     ],
     locale: 'en_US',
@@ -53,8 +53,15 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'JPGMonster - Free JPG Optimizer',
-    description: 'Optimize your JPGs for your website in a fast, fun, and free way',
-    images: ['/og-image.png'],
+    description: 'Optimize your JPGs for your website in a fast, fun, and free way. Compress JPEG images instantly with our monster-powered tool.',
+    images: [
+      {
+        url: 'https://yxmgdkcvglytfkklfutp.supabase.co/storage/v1/object/public/website-assets/JPGMonster-Feat-Image-TW.jpg',
+        width: 1200,
+        height: 675,
+        alt: 'JPGMonster - Free JPG Optimizer - Compress your images instantly',
+      }
+    ],
   },
   robots: {
     index: true,
