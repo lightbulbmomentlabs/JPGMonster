@@ -1,0 +1,7 @@
+# Target only modern browsers that support ES2020+ features
+# This significantly reduces polyfills for Array.at, Array.flat, Object.fromEntries, etc.
+Chrome >= 85
+Firefox >= 79
+Safari >= 14
+Edge >= 85
+not dead
