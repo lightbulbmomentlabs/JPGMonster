@@ -46,8 +46,8 @@ export function HeroSection() {
 
   return (
     <section className="relative bg-gradient-to-br from-blue-50 to-purple-50 py-20 px-2 sm:px-4">
-      <div className="container mx-auto max-w-7xl">
-        <div className="flex justify-center items-start gap-8">
+      <div className="container mx-auto max-w-[1400px]">
+        <div className="flex justify-center items-start gap-12">
           
           {/* Left Ad */}
           <div className="flex-shrink-0 xl:sticky xl:top-[150px] xl:self-start">
@@ -55,7 +55,7 @@ export function HeroSection() {
           </div>
 
           {/* Main Content */}
-          <div className="max-w-4xl text-center flex-grow">
+          <div className="max-w-5xl text-center flex-grow">
             {/* Headline */}
             <h1 
               id="main-heading"
@@ -71,7 +71,8 @@ export function HeroSection() {
                   <span className="monster-gradient-text">
                     JPG Compressor Online
                   </span>
-                  {' '}— Compress Images Without Losing Quality
+                  <br />
+                  Compress Images Without Losing Quality
                 </>
               )}
             </h1>
