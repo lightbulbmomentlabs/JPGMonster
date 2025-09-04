@@ -304,7 +304,7 @@ export function ImageProcessor({
             {isProcessing ? (
               <>
                 <img 
-                  src="https://yxmgdkcvglytfkklfutp.supabase.co/storage/v1/object/public/website-assets/JPG-Monster-Logo-mascot.png"
+                  src="https://yxmgdkcvglytfkklfutp.supabase.co/storage/v1/object/public/website-assets/optimized/JPG-Monster-mascot.jpg"
                   alt="JPG Monster"
                   className="h-5 w-5 mr-2 object-contain animate-pulse"
                 />
@@ -313,7 +313,7 @@ export function ImageProcessor({
             ) : (
               <>
                 <img 
-                  src="https://yxmgdkcvglytfkklfutp.supabase.co/storage/v1/object/public/website-assets/JPG-Monster-Logo-mascot.png"
+                  src="https://yxmgdkcvglytfkklfutp.supabase.co/storage/v1/object/public/website-assets/optimized/JPG-Monster-mascot.jpg"
                   alt="JPG Monster"
                   className="h-5 w-5 mr-2 object-contain"
                 />
@@ -353,7 +353,7 @@ export function ImageProcessor({
             <div className="flex justify-between items-center">
               <CardTitle className="flex items-center gap-3 text-2xl">
                 <img 
-                  src="https://yxmgdkcvglytfkklfutp.supabase.co/storage/v1/object/public/website-assets/JPG-Monster-pooping-v1.png"
+                  src="https://yxmgdkcvglytfkklfutp.supabase.co/storage/v1/object/public/website-assets/optimized/JPG-Monster-pooping.jpg"
                   alt="JPG Monster"
                   className="h-25 w-25 object-contain"
                 />

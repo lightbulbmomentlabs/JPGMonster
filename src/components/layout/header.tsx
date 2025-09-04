@@ -8,9 +8,9 @@ export function Header() {
       <div className="container mx-auto px-4 flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center space-x-3">
           <img 
-            src="https://yxmgdkcvglytfkklfutp.supabase.co/storage/v1/object/public/website-assets/JPG-Monster-Icon-Sml.png"
+            src="https://yxmgdkcvglytfkklfutp.supabase.co/storage/v1/object/public/website-assets/optimized/JPG-Monster-Icon-Sml.jpg"
             alt="JPG Monster Logo"
-            className="h-8 w-8 object-contain"
+            className="h-8 w-8 object-contain rounded-lg"
           />
           <span className="font-bold text-xl text-black font-heading">
             <span className="monster-gradient-text">JPG</span>Monster

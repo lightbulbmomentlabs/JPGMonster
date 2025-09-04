@@ -253,7 +253,7 @@ export function ImageUploader({
               {isDragActive ? (
                 <div className="animate-in zoom-in duration-300">
                   <img 
-                    src="https://yxmgdkcvglytfkklfutp.supabase.co/storage/v1/object/public/website-assets/JPG-Monster-Logo-mascot.png"
+                    src="https://yxmgdkcvglytfkklfutp.supabase.co/storage/v1/object/public/website-assets/optimized/JPG-Monster-mascot.jpg"
                     alt="JPG Monster Mascot"
                     className="h-40 w-40 animate-pulse object-contain"
                   />
@@ -262,7 +262,7 @@ export function ImageUploader({
                 <div className="relative group">
                   <div className="transition-transform duration-300 group-hover:scale-110 group-hover:rotate-2">
                     <img 
-                      src="https://yxmgdkcvglytfkklfutp.supabase.co/storage/v1/object/public/website-assets/JPG-Monster-Logo-mascot.png"
+                      src="https://yxmgdkcvglytfkklfutp.supabase.co/storage/v1/object/public/website-assets/optimized/JPG-Monster-mascot.jpg"
                       alt="JPG Monster Mascot"
                       className="h-32 w-32 object-contain"
                     />
@@ -305,7 +305,7 @@ export function ImageUploader({
               <div className="flex justify-center">
                 {isDragActive ? (
                   <img 
-                    src="https://yxmgdkcvglytfkklfutp.supabase.co/storage/v1/object/public/website-assets/JPG-Monster-Logo-mascot.png"
+                    src="https://yxmgdkcvglytfkklfutp.supabase.co/storage/v1/object/public/website-assets/optimized/JPG-Monster-mascot.jpg"
                     alt="JPG Monster Mascot"
                     className="h-32 w-32 object-contain animate-pulse"
                   />
@@ -314,7 +314,7 @@ export function ImageUploader({
                     <Upload className="h-16 w-16 text-gray-400" />
                     <div className="absolute -top-2 -right-2">
                       <img 
-                        src="https://yxmgdkcvglytfkklfutp.supabase.co/storage/v1/object/public/website-assets/JPG-Monster-Logo-mascot.png"
+                        src="https://yxmgdkcvglytfkklfutp.supabase.co/storage/v1/object/public/website-assets/optimized/JPG-Monster-mascot.jpg"
                         alt="JPG Monster Mascot"
                         className="h-16 w-16 object-contain"
                       />
@@ -351,7 +351,7 @@ export function ImageUploader({
           <div className="flex justify-between items-center mb-4">
             <div className="flex items-center gap-3 text-lg font-medium">
               <img 
-                src="https://yxmgdkcvglytfkklfutp.supabase.co/storage/v1/object/public/website-assets/JPGMonster-eat-v1.png"
+                src="https://yxmgdkcvglytfkklfutp.supabase.co/storage/v1/object/public/website-assets/optimized/JPGMonster-Ready-to-Eat.jpg"
                 alt="JPG Monster"
                 className="h-25 w-25 object-contain"
               />
