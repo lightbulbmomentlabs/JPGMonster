@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { ImageUploader } from '@/components/upload/image-uploader';
 import { ProcessedImage } from '@/types';
-import { AdUnit } from '@/components/ads/ad-unit';
+import { SmartAds } from '@/components/ads/smart-ads';
 
 export function HeroSection() {
   const [processedImages, setProcessedImages] = useState<ProcessedImage[]>([]);
@@ -51,7 +51,7 @@ export function HeroSection() {
           
           {/* Left Ad */}
           <div className="flex-shrink-0 xl:sticky xl:top-[150px] xl:self-start">
-            <AdUnit size="medium-rectangle" position="left" />
+            <SmartAds size="medium-rectangle" position="left" />
           </div>
 
           {/* Main Content */}
@@ -95,7 +95,7 @@ export function HeroSection() {
 
           {/* Right Ad */}
           <div className="flex-shrink-0 xl:sticky xl:top-[150px] xl:self-start">
-            <AdUnit size="medium-rectangle" position="right" />
+            <SmartAds size="medium-rectangle" position="right" />
           </div>
 
         </div>
