@@ -98,6 +98,16 @@ export default function RootLayout({
           rel="dns-prefetch" 
           href="https://pagead2.googlesyndication.com" 
         />
+        <link 
+          rel="preload" 
+          as="image" 
+          href="/jpg-monster-icon.jpg"
+        />
+        <link 
+          rel="preload" 
+          as="image" 
+          href="/jpg-monster-mascot.jpg"
+        />
         <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8970429986961450"

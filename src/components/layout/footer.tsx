@@ -7,7 +7,7 @@ export function Footer() {
         <div className="text-center space-y-6">
           <Link href="/" className="flex items-center justify-center space-x-2">
             <img 
-              src="https://yxmgdkcvglytfkklfutp.supabase.co/storage/v1/object/public/website-assets/optimized/JPG-Monster-Icon-Sml.jpg"
+              src="/jpg-monster-icon.jpg"
               alt="JPG Monster Logo"
               className="h-8 w-8 object-contain rounded-lg"
             />

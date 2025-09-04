@@ -8,7 +8,7 @@ export function Header() {
       <div className="container mx-auto px-4 flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center space-x-3">
           <img 
-            src="https://yxmgdkcvglytfkklfutp.supabase.co/storage/v1/object/public/website-assets/optimized/JPG-Monster-Icon-Sml.jpg"
+            src="/jpg-monster-icon.jpg"
             alt="JPG Monster Logo"
             className="h-8 w-8 object-contain rounded-lg"
           />
