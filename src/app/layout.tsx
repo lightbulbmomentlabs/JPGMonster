@@ -16,11 +16,11 @@ const fredoka = Fredoka({
 
 export const metadata: Metadata = {
   title: {
-    default: 'JPGMonster - Free JPG Optimizer',
-    template: '%s | JPGMonster',
+    default: 'Free JPG Compressor Online - Compress Images Without Losing Quality | JPGMonster 2025',
+    template: '%s | Free JPG Optimizer 2025',
   },
-  description: 'Optimize your JPGs for your website in a fast, fun, and free way. Compress JPEG images instantly with our monster-powered tool.',
-  keywords: ['JPG optimizer', 'image compression', 'JPEG compressor', 'web optimization', 'free tool'],
+  description: 'Reduce image size with our free JPG compressor online. Compress JPEG images without losing quality, batch process multiple files, and optimize images for web. No signup required - instant compression tool 2025.',
+  keywords: ['compress JPG without losing quality', 'free JPG compressor online', 'reduce image size', 'compress image online', 'batch image compression free', 'image optimizer', 'bulk JPEG optimizer', 'lossless image compression tool', 'compress images for website', 'reduce image size for web', 'progressive JPEG compression', 'JPG compression 2025'],
   authors: [{ name: 'JPGMonster' }],
   creator: 'JPGMonster',
   publisher: 'JPGMonster',
@@ -38,8 +38,8 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: 'JPGMonster - Free JPG Optimizer',
-    description: 'Optimize your JPGs for your website in a fast, fun, and free way. Compress JPEG images instantly with our monster-powered tool.',
+    title: 'Free JPG Compressor Online - Compress Images Without Losing Quality 2025',
+    description: 'Reduce image size with our free JPG compressor online. Compress JPEG images without losing quality, batch process multiple files, and optimize images for web.',
     url: '/',
     siteName: 'JPGMonster',
     images: [
@@ -55,8 +55,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'JPGMonster - Free JPG Optimizer',
-    description: 'Optimize your JPGs for your website in a fast, fun, and free way. Compress JPEG images instantly with our monster-powered tool.',
+    title: 'Free JPG Compressor Online - Compress Images Without Losing Quality 2025',
+    description: 'Reduce image size with our free JPG compressor online. Compress JPEG images without losing quality, batch process multiple files, and optimize images for web.',
     images: [
       {
         url: 'https://yxmgdkcvglytfkklfutp.supabase.co/storage/v1/object/public/website-assets/JPGMonster-Feat-Image-TW.jpg',
@@ -112,6 +112,42 @@ export default function RootLayout({
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8970429986961450"
           crossOrigin="anonymous"
+        />
+        
+        {/* Structured Data for SEO */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "SoftwareApplication",
+              "name": "JPGMonster - Free JPG Compressor Online",
+              "description": "Free online JPG compression tool that reduces image size without losing quality. Batch process multiple files, optimize images for web, and compress JPEG files instantly.",
+              "url": "https://jpgmonster.com",
+              "applicationCategory": "ImageApplication",
+              "operatingSystem": "Web Browser",
+              "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD"
+              },
+              "featureList": [
+                "Compress JPG without losing quality",
+                "Batch image compression",
+                "Lossless image compression",
+                "Progressive JPEG optimization",
+                "Bulk JPEG processing",
+                "No registration required",
+                "Privacy-focused local processing"
+              ],
+              "keywords": "compress JPG without losing quality, free JPG compressor online, reduce image size, batch image compression, image optimizer, bulk JPEG optimizer",
+              "dateModified": "2025-01-01",
+              "author": {
+                "@type": "Organization",
+                "name": "JPGMonster"
+              }
+            })
+          }}
         />
       </head>
       <body className={`${inter.variable} ${fredoka.variable} font-sans antialiased min-h-screen bg-gray-50`} suppressHydrationWarning={true}>

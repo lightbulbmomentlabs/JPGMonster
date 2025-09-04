@@ -24,7 +24,7 @@ export function Footer() {
           </p>
           
           <p className="text-gray-400 text-sm">
-            © 2024 JPGMonster. All rights reserved.
+            © 2025 JPGMonster. All rights reserved.
           </p>
         </div>
       </div>

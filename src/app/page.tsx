@@ -6,6 +6,7 @@ import { WhyJPGmonsterSection } from '@/components/sections/why-jpgmonster-secti
 import { FeaturesDetailedSection } from '@/components/sections/features-detailed-section';
 import { UseCasesSection } from '@/components/sections/use-cases-section';
 import { PerformanceSection } from '@/components/sections/performance-section';
+import { FAQSection } from '@/components/sections/faq-section';
 import { SEOFooterSection } from '@/components/sections/seo-footer-section';
 import { AdPlaceholder } from '@/components/ads/ad-placeholder';
 
@@ -46,6 +47,9 @@ export default function Home() {
         </div>
 
         <PerformanceSection />
+        
+        {/* FAQ Section for SEO */}
+        <FAQSection />
       </main>
 
       <SEOFooterSection />

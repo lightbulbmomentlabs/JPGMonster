@@ -67,11 +67,11 @@ export function HeroSection() {
                 </>
               ) : (
                 <>
-                  Your{' '}
+                  Free{' '}
                   <span className="monster-gradient-text">
-                    JPGs Are Too Fat
+                    JPG Compressor Online
                   </span>
-                  . Feed &apos;Em to the Monster.
+                  {' '}— Compress Images Without Losing Quality
                 </>
               )}
             </h1>
@@ -88,8 +88,8 @@ export function HeroSection() {
 
             {/* Subheading */}
             <p className="mb-10 text-lg text-gray-600 sm:text-xl max-w-3xl mx-auto animate-in fade-in duration-1000 delay-500">
-              Compress JPGs online faster than you can say &quot;PageSpeed penalty.&quot; No logins. No nonsense. 
-              Just a hungry little monster who chews through file sizes like it&apos;s leg day.
+              Reduce image size instantly with our free online tool. Batch image compression, lossless optimization, 
+              and bulk JPEG processing — perfect for websites, emails, and social media. No signup required in 2025.
             </p>
           </div>
 
