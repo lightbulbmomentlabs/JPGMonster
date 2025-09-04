@@ -3,6 +3,7 @@
 import { useCallback, useState } from 'react';
 import { useDropzone } from 'react-dropzone';
 import { Upload, FileImage, X } from 'lucide-react';
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { validateImageFile, validateBatch, formatFileSize } from '@/lib/utils';
@@ -252,18 +253,22 @@ export function ImageUploader({
             <div className="flex justify-center">
               {isDragActive ? (
                 <div className="animate-in zoom-in duration-300">
-                  <img 
-                    src="/jpg-monster-mascot.jpg"
+                  <Image 
+                    src="/jpg-monster-mascot.webp"
                     alt="JPG Monster Mascot"
+                    width={160}
+                    height={160}
                     className="h-32 w-32 sm:h-40 sm:w-40 animate-pulse object-contain"
                   />
                 </div>
               ) : (
                 <div className="relative group">
                   <div className="transition-transform duration-300 group-hover:scale-110 group-hover:rotate-2">
-                    <img 
-                      src="/jpg-monster-mascot.jpg"
+                    <Image 
+                      src="/jpg-monster-mascot.webp"
                       alt="JPG Monster Mascot"
+                      width={128}
+                      height={128}
                       className="h-24 w-24 sm:h-32 sm:w-32 object-contain"
                     />
                   </div>
@@ -304,18 +309,22 @@ export function ImageUploader({
             <div className="space-y-4">
               <div className="flex justify-center">
                 {isDragActive ? (
-                  <img 
-                    src="/jpg-monster-mascot.jpg"
+                  <Image 
+                    src="/jpg-monster-mascot.webp"
                     alt="JPG Monster Mascot"
+                    width={128}
+                    height={128}
                     className="h-24 w-24 sm:h-32 sm:w-32 object-contain animate-pulse"
                   />
                 ) : (
                   <div className="relative">
                     <Upload className="h-16 w-16 text-gray-400" />
                     <div className="absolute -top-2 -right-2">
-                      <img 
-                        src="/jpg-monster-mascot.jpg"
+                      <Image 
+                        src="/jpg-monster-mascot.webp"
                         alt="JPG Monster Mascot"
+                        width={64}
+                        height={64}
                         className="h-12 w-12 sm:h-16 sm:w-16 object-contain"
                       />
                     </div>

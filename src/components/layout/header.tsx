@@ -1,16 +1,20 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 
 export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
       <div className="container mx-auto px-4 flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center space-x-3">
-          <img 
-            src="/jpg-monster-icon.jpg"
+          <Image 
+            src="/jpg-monster-icon.webp"
             alt="JPG Monster Logo"
+            width={32}
+            height={32}
             className="h-8 w-8 object-contain rounded-lg"
+            priority
           />
           <span className="font-bold text-xl text-black font-heading">
             <span className="monster-gradient-text">JPG</span>Monster

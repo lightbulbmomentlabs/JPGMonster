@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { Settings, Download, RotateCcw } from 'lucide-react';
+import Image from 'next/image';
 import { Slider } from '@/components/ui/slider';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -303,18 +304,22 @@ export function ImageProcessor({
           >
             {isProcessing ? (
               <>
-                <img 
-                  src="/jpg-monster-mascot.jpg"
+                <Image 
+                  src="/jpg-monster-mascot.webp"
                   alt="JPG Monster"
+                  width={20}
+                  height={20}
                   className="h-5 w-5 mr-2 object-contain animate-pulse"
                 />
                 Processing... ({Math.round(processingProgress)}%)
               </>
             ) : (
               <>
-                <img 
-                  src="/jpg-monster-mascot.jpg"
+                <Image 
+                  src="/jpg-monster-mascot.webp"
                   alt="JPG Monster"
+                  width={20}
+                  height={20}
                   className="h-5 w-5 mr-2 object-contain"
                 />
                 Feed the Monster ({files.length} file{files.length !== 1 ? 's' : ''})

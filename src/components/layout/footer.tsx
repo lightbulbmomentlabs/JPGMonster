@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export function Footer() {
   return (
@@ -6,9 +7,11 @@ export function Footer() {
       <div className="container mx-auto px-4 py-12">
         <div className="text-center space-y-6">
           <Link href="/" className="flex items-center justify-center space-x-2">
-            <img 
-              src="/jpg-monster-icon.jpg"
+            <Image 
+              src="/jpg-monster-icon.webp"
               alt="JPG Monster Logo"
+              width={32}
+              height={32}
               className="h-8 w-8 object-contain rounded-lg"
             />
             <span className="font-bold text-xl font-heading">
