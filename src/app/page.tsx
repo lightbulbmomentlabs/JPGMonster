@@ -9,10 +9,12 @@ import { PerformanceSection } from '@/components/sections/performance-section';
 import { FAQSection } from '@/components/sections/faq-section';
 import { SEOFooterSection } from '@/components/sections/seo-footer-section';
 import { AdPlaceholder } from '@/components/ads/ad-placeholder';
+import { StructuredData } from '@/components/seo/structured-data';
 
 export default function Home() {
   return (
     <>
+      <StructuredData />
       <Header />
       
       {/* Top Banner Ad */}
