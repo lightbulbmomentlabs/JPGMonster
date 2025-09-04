@@ -46,16 +46,16 @@ export function HeroSection() {
 
   return (
     <section className="relative bg-gradient-to-br from-blue-50 to-purple-50 py-20 px-2 sm:px-4">
-      <div className="container mx-auto max-w-[1400px]">
-        <div className="flex justify-center items-start gap-12">
+      <div className="container mx-auto max-w-[1600px] px-4">
+        <div className="flex justify-between items-start gap-8 xl:gap-12">
           
           {/* Left Ad */}
-          <div className="flex-shrink-0 xl:sticky xl:top-[150px] xl:self-start">
+          <div className="hidden xl:block flex-shrink-0 xl:sticky xl:top-[150px] xl:self-start w-[300px]">
             <SmartAds size="medium-rectangle" position="left" />
           </div>
 
           {/* Main Content */}
-          <div className="max-w-5xl text-center flex-grow">
+          <div className="w-full xl:max-w-6xl text-center xl:flex-grow">
             {/* Headline */}
             <h1 
               id="main-heading"
@@ -95,7 +95,7 @@ export function HeroSection() {
           </div>
 
           {/* Right Ad */}
-          <div className="flex-shrink-0 xl:sticky xl:top-[150px] xl:self-start">
+          <div className="hidden xl:block flex-shrink-0 xl:sticky xl:top-[150px] xl:self-start w-[300px]">
             <SmartAds size="medium-rectangle" position="right" />
           </div>
 
