@@ -1,5 +1,3 @@
-import { TiltCard } from '@/components/ui/tilt-card';
-
 export function WhyJPGmonsterSection() {
   const benefits = [
     {
@@ -57,26 +55,25 @@ export function WhyJPGmonsterSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {benefits.map((benefit, index) => (
-            <TiltCard key={benefit.title} className="h-full">
-              <div 
-                className={`
-                  text-center p-6 h-full rounded-xl bg-gradient-to-br ${benefit.gradient} 
-                  shadow-lg hover:shadow-2xl transition-shadow duration-300
-                  animate-in fade-in duration-700
-                `}
-                style={{ animationDelay: `${index * 150}ms` }}
-              >
-                <div className="text-4xl mb-4 filter drop-shadow-lg">
-                  {benefit.icon}
-                </div>
-                <h3 className="font-heading font-medium text-white mb-3 text-lg drop-shadow">
-                  {benefit.title}
-                </h3>
-                <p className="text-white/90 text-sm leading-relaxed drop-shadow">
-                  {benefit.description}
-                </p>
+            <div 
+              key={benefit.title}
+              className={`
+                text-center p-6 h-full rounded-xl bg-gradient-to-br ${benefit.gradient} 
+                shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 transform-gpu
+                animate-in fade-in duration-700
+              `}
+              style={{ animationDelay: `${index * 150}ms` }}
+            >
+              <div className="text-4xl mb-4 filter drop-shadow-lg">
+                {benefit.icon}
               </div>
-            </TiltCard>
+              <h3 className="font-heading font-medium text-white mb-3 text-lg drop-shadow">
+                {benefit.title}
+              </h3>
+              <p className="text-white/90 text-sm leading-relaxed drop-shadow">
+                {benefit.description}
+              </p>
+            </div>
           ))}
         </div>
       </div>

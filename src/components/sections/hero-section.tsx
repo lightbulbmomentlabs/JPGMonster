@@ -15,13 +15,15 @@ export function HeroSection() {
     const heading = document.getElementById('main-heading');
     if (heading) {
       const headerOffset = 150; // Account for fixed header
-      const elementPosition = heading.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
+      // Use scrollIntoView instead of getBoundingClientRect to avoid forced reflow
+      heading.scrollIntoView({ 
+        behavior: 'smooth', 
+        block: 'start' 
       });
+      // Adjust for header offset after scroll completes
+      setTimeout(() => {
+        window.scrollBy(0, -headerOffset);
+      }, 50);
     }
   };
 
