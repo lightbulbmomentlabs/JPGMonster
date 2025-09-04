@@ -1,4 +1,4 @@
-import imageCompression from 'browser-image-compression';
+// Dynamic import for browser-image-compression to reduce initial bundle size
 import { CompressionOptions, ProcessedImage, UseCasePreset } from '@/types';
 
 export const USE_CASE_PRESETS: Record<string, UseCasePreset> = {
@@ -176,6 +176,7 @@ export async function smartCompressImage(
         },
       };
 
+      const imageCompression = (await import('browser-image-compression')).default;
       const compressed = await imageCompression(file, compressionOptions);
       
       // Check if we've reached our target
@@ -237,6 +238,7 @@ export async function compressImage(
   };
 
   try {
+    const imageCompression = (await import('browser-image-compression')).default;
     const compressedFile = await imageCompression(file, compressionOptions);
     return compressedFile;
   } catch (error) {
