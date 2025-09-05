@@ -69,10 +69,10 @@ export function HeroSection() {
                 <>
                   Free{' '}
                   <span className="monster-gradient-text">
-                    JPG Compressor Online
+                    JPG Compressor
                   </span>
-                  <br />
-                  Compress Images Without Losing Quality
+                  .<br />
+                  Compress Images Without Losing Quality.
                 </>
               )}
             </h1>
