@@ -10,7 +10,7 @@ export function FeaturesDetailedSection() {
   ];
 
   return (
-    <section className="py-20 px-4 bg-gradient-to-br from-purple-50 to-pink-50">
+    <section id="features" className="py-20 px-4 bg-gradient-to-br from-purple-50 to-pink-50">
       <div className="container mx-auto max-w-4xl">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-5xl font-heading font-semibold text-gray-900 mb-6">

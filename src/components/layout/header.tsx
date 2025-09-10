@@ -35,7 +35,7 @@ export function Header() {
             Features
           </Link>
           <Link 
-            href="/about" 
+            href="/#about" 
             className="text-sm font-medium text-gray-600 hover:text-monster-primary transition-colors"
           >
             About

@@ -21,7 +21,7 @@ export function HowItWorksSection() {
   ];
 
   return (
-    <section className="py-20 px-4 bg-gradient-to-br from-gray-50 to-blue-50">
+    <section id="how-it-works" className="py-20 px-4 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-5xl font-heading font-semibold text-gray-900 mb-6">

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Inter, Fredoka } from 'next/font/google';
+import { GoogleAnalytics } from '@/components/analytics/google-analytics';
 import './globals.css';
 
 const inter = Inter({
@@ -90,19 +91,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Google tag (gtag.js) */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-44J4YK1QDR"></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-44J4YK1QDR');
-            `,
-          }}
-        />
         <link 
           rel="preconnect" 
           href="https://pagead2.googlesyndication.com" 
@@ -127,7 +115,8 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
       </head>
-      <body className={`${inter.variable} ${fredoka.variable} font-sans antialiased min-h-screen bg-gray-50`} suppressHydrationWarning={true}>
+      <body className={`${inter.variable} ${fredoka.variable} font-sans antialiased min-h-screen bg-gray-50`}>
+        <GoogleAnalytics />
         <div className="flex min-h-screen flex-col">
           {children}
         </div>

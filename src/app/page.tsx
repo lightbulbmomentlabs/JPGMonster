@@ -7,6 +7,7 @@ import { FeaturesDetailedSection } from '@/components/sections/features-detailed
 import { UseCasesSection } from '@/components/sections/use-cases-section';
 import { PerformanceSection } from '@/components/sections/performance-section';
 import { FAQSection } from '@/components/sections/faq-section';
+import { AboutSection } from '@/components/sections/about-section';
 import { SEOFooterSection } from '@/components/sections/seo-footer-section';
 import { AdPlaceholder } from '@/components/ads/ad-placeholder';
 import { StructuredData } from '@/components/seo/structured-data';
@@ -49,6 +50,9 @@ export default function Home() {
         </div>
 
         <PerformanceSection />
+        
+        {/* About Section */}
+        <AboutSection />
         
         {/* FAQ Section for SEO */}
         <FAQSection />
