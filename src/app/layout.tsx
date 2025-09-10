@@ -7,12 +7,16 @@ const inter = Inter({
   variable: '--font-inter',
   subsets: ['latin'],
   weight: ['400'],
+  display: 'swap', // Better loading for blocked networks
+  fallback: ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
 });
 
 const fredoka = Fredoka({
   variable: '--font-fredoka',
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
+  display: 'swap', // Better loading for blocked networks
+  fallback: ['Georgia', 'Times New Roman', 'serif'],
 });
 
 export const metadata: Metadata = {
@@ -91,14 +95,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link 
-          rel="preconnect" 
-          href="https://pagead2.googlesyndication.com" 
-        />
-        <link 
-          rel="dns-prefetch" 
-          href="https://pagead2.googlesyndication.com" 
-        />
+        {/* DNS prefetch and preconnect for better loading in restrictive networks */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+        <link rel="preconnect" href="https://pagead2.googlesyndication.com" />
+        <link rel="dns-prefetch" href="//pagead2.googlesyndication.com" />
+        <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="//www.google-analytics.com" />
         <link 
           rel="preload" 
           as="image" 

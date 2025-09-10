@@ -147,9 +147,28 @@
     transition: transform 200ms ease-out;
   }
   
-  /* Custom font utilities to ensure Google Fonts work correctly */
+  /* Custom font utilities with robust fallbacks for restricted networks */
   .font-heading {
-    font-family: var(--font-fredoka), var(--font-inter), ui-sans-serif, system-ui, sans-serif !important;
+    font-family: var(--font-fredoka), var(--font-inter), 'Georgia', 'Times New Roman', ui-serif, serif !important;
+    font-display: swap; /* Ensure text is visible during font load */
+  }
+  
+  /* Improve default font stack with better fallbacks */
+  .font-sans {
+    font-family: var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif !important;
+    font-display: swap;
+  }
+  
+  /* Add fallback font loading classes */
+  @media (prefers-reduced-motion: no-preference) {
+    .font-loading {
+      animation: fadeIn 0.3s ease-in-out;
+    }
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0.7; }
+    to { opacity: 1; }
   }
   
   /* Monster gradient text utility */
