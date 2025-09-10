@@ -17,7 +17,7 @@ export function AboutSection() {
               Why JPGMonster Exists
             </h3>
             <p className="text-gray-600 mb-6">
-              We built JPGMonster because compressing images shouldn't be complicated, expensive, or require a PhD in image processing. Whether you're a blogger trying to speed up your site, a developer optimizing assets, or someone who just needs smaller files, JPGMonster gets the job done fast.
+              We built JPGMonster because compressing images shouldn&apos;t be complicated, expensive, or require a PhD in image processing. Whether you&apos;re a blogger trying to speed up your site, a developer optimizing assets, or someone who just needs smaller files, JPGMonster gets the job done fast.
             </p>
 
             <h3 className="text-2xl font-heading font-semibold text-gray-900 mb-6">
@@ -35,7 +35,7 @@ export function AboutSection() {
               Our Mission
             </h3>
             <p className="text-gray-600">
-              To make high-quality image compression accessible to everyone. No complex software, no subscriptions, no limits. Just upload, compress, and download. That's the JPGMonster way.
+              To make high-quality image compression accessible to everyone. No complex software, no subscriptions, no limits. Just upload, compress, and download. That&apos;s the JPGMonster way.
             </p>
           </div>
         </div>
