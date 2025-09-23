@@ -67,6 +67,7 @@ export function SmartAds({ position, size, adSlot }: SmartAdsProps) {
       height: '250px',
       'data-ad-format': 'rectangle',
       'data-ad-slot': adSlot || '1234567890', // Use provided slot or placeholder
+      'data-full-width-responsive': 'false',
     },
     'header-banner': {
       width: '100%',
@@ -80,6 +81,7 @@ export function SmartAds({ position, size, adSlot }: SmartAdsProps) {
       height: '280px',
       'data-ad-format': 'rectangle',
       'data-ad-slot': adSlot || '1234567890', // Use provided slot or placeholder
+      'data-full-width-responsive': 'false',
     }
   };
 
@@ -108,7 +110,7 @@ export function SmartAds({ position, size, adSlot }: SmartAdsProps) {
           data-ad-client="ca-pub-8970429986961450"
           data-ad-slot={config['data-ad-slot']}
           data-ad-format={config['data-ad-format']}
-          data-full-width-responsive={config['data-full-width-responsive'] || 'false'}
+          data-full-width-responsive={config['data-full-width-responsive']}
         />
       )}
       
