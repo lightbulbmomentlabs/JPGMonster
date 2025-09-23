@@ -10,6 +10,7 @@ import { FAQSection } from '@/components/sections/faq-section';
 import { AboutSection } from '@/components/sections/about-section';
 import { SEOFooterSection } from '@/components/sections/seo-footer-section';
 import { AdPlaceholder } from '@/components/ads/ad-placeholder';
+import { SmartAds } from '@/components/ads/smart-ads';
 import { StructuredData } from '@/components/seo/structured-data';
 
 export default function Home() {
@@ -20,7 +21,7 @@ export default function Home() {
       
       {/* Top Banner Ad */}
       <div className="py-4 bg-gray-50">
-        <AdPlaceholder size="banner" />
+        <SmartAds size="header-banner" position="header" adSlot="4874135573" />
       </div>
 
       <main className="flex-1">
@@ -28,7 +29,7 @@ export default function Home() {
         
         {/* Ad after Hero */}
         <div className="py-8 bg-white">
-          <AdPlaceholder size="rectangle" />
+          <SmartAds size="header-banner" position="header" adSlot="2060748909" />
         </div>
 
         <HowItWorksSection />

@@ -3,11 +3,12 @@
 import { useEffect, useRef, useState, useCallback } from 'react';
 
 interface SmartAdsProps {
-  position: 'left' | 'right';
-  size: 'medium-rectangle';
+  position: 'left' | 'right' | 'header' | 'footer';
+  size: 'medium-rectangle' | 'header-banner' | 'large-rectangle';
+  adSlot?: string; // Allow custom ad slot ID
 }
 
-export function SmartAds({ position, size }: SmartAdsProps) {
+export function SmartAds({ position, size, adSlot }: SmartAdsProps) {
   const adRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
   const [adLoaded, setAdLoaded] = useState(false);
@@ -65,15 +66,32 @@ export function SmartAds({ position, size }: SmartAdsProps) {
       width: '300px',
       height: '250px',
       'data-ad-format': 'rectangle',
+      'data-ad-slot': adSlot || '1234567890', // Use provided slot or placeholder
+    },
+    'header-banner': {
+      width: '100%',
+      height: '90px',
+      'data-ad-format': 'auto',
+      'data-full-width-responsive': 'true',
+      'data-ad-slot': adSlot || '4874135573', // Default to header ad slot
+    },
+    'large-rectangle': {
+      width: '336px',
+      height: '280px',
+      'data-ad-format': 'rectangle',
+      'data-ad-slot': adSlot || '1234567890', // Use provided slot or placeholder
     }
   };
 
   const config = sizeConfig[size];
 
   return (
-    <div 
+    <div
       ref={adRef}
-      className={`hidden xl:block ${position === 'left' ? 'xl:mr-8' : 'xl:ml-8'}`}
+      className={`
+        ${position === 'header' || position === 'footer' ? 'w-full' : 'hidden xl:block'}
+        ${position === 'left' ? 'xl:mr-8' : position === 'right' ? 'xl:ml-8' : ''}
+      `}
       style={{
         minWidth: config.width,
         minHeight: config.height,
@@ -83,14 +101,14 @@ export function SmartAds({ position, size }: SmartAdsProps) {
         <ins
           className="adsbygoogle"
           style={{
-            display: 'inline-block',
+            display: size === 'header-banner' ? 'block' : 'inline-block',
             width: config.width,
             height: config.height,
           }}
           data-ad-client="ca-pub-8970429986961450"
-          data-ad-slot="1234567890" // You'll need to replace with actual ad slot IDs
+          data-ad-slot={config['data-ad-slot']}
           data-ad-format={config['data-ad-format']}
-          data-full-width-responsive="false"
+          data-full-width-responsive={config['data-full-width-responsive'] || 'false'}
         />
       )}
       
