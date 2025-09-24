@@ -76,11 +76,10 @@ export function SmartAds({ position, size, adSlot }: SmartAdsProps) {
   return (
     <div
       className={`
-        ${position === 'header' || position === 'footer' ? 'w-full max-w-none' : 'w-full max-w-sm mx-auto'}
+        ${position === 'header' || position === 'footer' ? 'w-full max-w-none flex justify-center' : 'w-full max-w-sm mx-auto'}
         ${position === 'left' ? 'xl:mr-8' : position === 'right' ? 'xl:ml-8' : ''}
       `}
       style={{
-        minWidth: size === 'header-banner' ? '100%' : config.width,
         minHeight: config.height,
       }}
     >
