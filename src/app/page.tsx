@@ -21,7 +21,9 @@ export default function Home() {
       
       {/* Top Banner Ad */}
       <div className="py-4 bg-gray-50">
-        <SmartAds size="header-banner" position="header" adSlot="4874135573" />
+        <div className="container mx-auto px-4 flex justify-center">
+          <SmartAds size="header-banner" position="header" adSlot="4874135573" />
+        </div>
       </div>
 
       <main className="flex-1">
@@ -29,7 +31,9 @@ export default function Home() {
         
         {/* Ad after Hero */}
         <div className="py-8 bg-white">
-          <SmartAds size="header-banner" position="header" adSlot="2060748909" />
+          <div className="container mx-auto px-4 flex justify-center">
+            <SmartAds size="header-banner" position="header" adSlot="2060748909" />
+          </div>
         </div>
 
         <HowItWorksSection />
