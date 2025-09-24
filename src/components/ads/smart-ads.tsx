@@ -76,11 +76,15 @@ export function SmartAds({ position, size, adSlot }: SmartAdsProps) {
   return (
     <div
       className={`
-        ${position === 'header' || position === 'footer' ? 'w-full max-w-none flex justify-center' : 'w-full max-w-sm mx-auto'}
+        ${position === 'header' || position === 'footer' ? 'w-full' : 'w-full max-w-sm mx-auto'}
         ${position === 'left' ? 'xl:mr-8' : position === 'right' ? 'xl:ml-8' : ''}
       `}
       style={{
         minHeight: config.height,
+        textAlign: 'center',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
       }}
     >
       <ins
@@ -89,6 +93,7 @@ export function SmartAds({ position, size, adSlot }: SmartAdsProps) {
           display: 'block',
           width: config.width,
           height: size === 'header-banner' ? 'auto' : config.height,
+          margin: '0 auto',
         }}
         data-ad-client="ca-pub-8970429986961450"
         data-ad-slot={config['data-ad-slot']}
