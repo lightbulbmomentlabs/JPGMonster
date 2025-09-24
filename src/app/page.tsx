@@ -9,7 +9,6 @@ import { PerformanceSection } from '@/components/sections/performance-section';
 import { FAQSection } from '@/components/sections/faq-section';
 import { AboutSection } from '@/components/sections/about-section';
 import { SEOFooterSection } from '@/components/sections/seo-footer-section';
-import { AdPlaceholder } from '@/components/ads/ad-placeholder';
 import { SmartAds } from '@/components/ads/smart-ads';
 import { StructuredData } from '@/components/seo/structured-data';
 
@@ -42,7 +41,9 @@ export default function Home() {
         
         {/* Mid-page Ad */}
         <div className="py-8 bg-gray-50">
-          <AdPlaceholder size="large-rectangle" />
+          <div className="container mx-auto px-4 flex justify-center">
+            <SmartAds size="header-banner" position="header" adSlot="3654552085" />
+          </div>
         </div>
 
         <FeaturesDetailedSection />
@@ -51,7 +52,9 @@ export default function Home() {
         
         {/* Ad before Performance */}
         <div className="py-8 bg-white">
-          <AdPlaceholder size="banner" />
+          <div className="container mx-auto px-4 flex justify-center">
+            <SmartAds size="header-banner" position="header" adSlot="8430853155" />
+          </div>
         </div>
 
         <PerformanceSection />
