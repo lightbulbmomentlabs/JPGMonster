@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState, useCallback } from 'react';
+import { useEffect, useState } from 'react';
 
 interface SmartAdsProps {
   position: 'left' | 'right' | 'header' | 'footer';
@@ -9,56 +9,31 @@ interface SmartAdsProps {
 }
 
 export function SmartAds({ position, size, adSlot }: SmartAdsProps) {
-  const adRef = useRef<HTMLDivElement>(null);
-  const [isVisible, setIsVisible] = useState(false);
   const [adLoaded, setAdLoaded] = useState(false);
 
-  const loadAdSenseScript = useCallback(() => {
+  useEffect(() => {
+    // Load ads immediately, no intersection observer complexity
     if (adLoaded || typeof window === 'undefined') return;
-    
+
     setAdLoaded(true);
-    
-    // Initialize AdSense if not already loaded
+
+    // Initialize AdSense
     const win = window as Window & { adsbygoogle?: unknown[] };
     if (!win.adsbygoogle) {
       win.adsbygoogle = [];
     }
-    
-    // Push the ad
-    try {
-      (win.adsbygoogle = win.adsbygoogle || []).push({});
-    } catch {
-      console.log('AdSense not ready yet');
-    }
-  }, [adLoaded]);
 
-  useEffect(() => {
-    const adElement = adRef.current;
-    if (!adElement) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && !adLoaded) {
-          // Small delay to improve Core Web Vitals while still loading ads quickly
-          setTimeout(() => {
-            setIsVisible(true);
-            loadAdSenseScript();
-          }, 150); // 150ms delay - barely noticeable but helps PageSpeed
-        }
-      },
-      {
-        // Load ads when they're 200px away from being visible
-        rootMargin: '200px',
-        threshold: 0
+    // Small delay to let the DOM settle, then load the ad
+    const timer = setTimeout(() => {
+      try {
+        (win.adsbygoogle = win.adsbygoogle || []).push({});
+      } catch (error) {
+        console.log('AdSense loading:', error);
       }
-    );
+    }, 100);
 
-    observer.observe(adElement);
-
-    return () => {
-      observer.disconnect();
-    };
-  }, [adLoaded, loadAdSenseScript]);
+    return () => clearTimeout(timer);
+  }, [adLoaded]);
 
   // Size configurations
   const sizeConfig = {
@@ -89,50 +64,27 @@ export function SmartAds({ position, size, adSlot }: SmartAdsProps) {
 
   return (
     <div
-      ref={adRef}
       className={`
-        ${position === 'header' || position === 'footer' ? 'w-full' : 'hidden xl:block'}
+        ${position === 'header' || position === 'footer' ? 'w-full max-w-none' : 'w-full max-w-sm mx-auto'}
         ${position === 'left' ? 'xl:mr-8' : position === 'right' ? 'xl:ml-8' : ''}
       `}
       style={{
-        minWidth: config.width,
+        minWidth: size === 'header-banner' ? '100%' : config.width,
         minHeight: config.height,
       }}
     >
-      {isVisible && (
-        <ins
-          className="adsbygoogle"
-          style={{
-            display: size === 'header-banner' ? 'block' : 'inline-block',
-            width: config.width,
-            height: config.height,
-          }}
-          data-ad-client="ca-pub-8970429986961450"
-          data-ad-slot={config['data-ad-slot']}
-          data-ad-format={config['data-ad-format']}
-          data-full-width-responsive={config['data-full-width-responsive']}
-        />
-      )}
-      
-      {/* Placeholder while loading */}
-      {!isVisible && (
-        <div
-          style={{
-            width: config.width,
-            height: config.height,
-            backgroundColor: '#f8f9fa',
-            border: '1px solid #e9ecef',
-            borderRadius: '8px',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            color: '#6c757d',
-            fontSize: '14px',
-          }}
-        >
-          Advertisement
-        </div>
-      )}
+      <ins
+        className="adsbygoogle"
+        style={{
+          display: 'block',
+          width: config.width,
+          height: size === 'header-banner' ? 'auto' : config.height,
+        }}
+        data-ad-client="ca-pub-8970429986961450"
+        data-ad-slot={config['data-ad-slot']}
+        data-ad-format={config['data-ad-format']}
+        data-full-width-responsive={config['data-full-width-responsive']}
+      />
     </div>
   );
 }
