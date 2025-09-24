@@ -34,7 +34,7 @@ const nextConfig = {
               "font-src 'self' https://fonts.gstatic.com",
               "img-src 'self' data: blob: https: http:",
               "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://pagead2.googlesyndication.com https://ep1.adtrafficquality.google https://adnxs.com https://adsystem.google.com https://fundingchoicesmessages.google.com",
-              "frame-src 'self' https://googleads.g.doubleclick.net https://tpc.googlesyndication.com",
+              "frame-src 'self' https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://ep2.adtrafficquality.google https://www.google.com",
               "object-src 'none'",
               "base-uri 'self'",
               "form-action 'self'",

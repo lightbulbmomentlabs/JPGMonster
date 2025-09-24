@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef } from 'react';
 
 interface SmartAdsProps {
   position: 'left' | 'right' | 'header' | 'footer';
@@ -9,31 +9,7 @@ interface SmartAdsProps {
 }
 
 export function SmartAds({ position, size, adSlot }: SmartAdsProps) {
-  const [adLoaded, setAdLoaded] = useState(false);
-
-  useEffect(() => {
-    // Load ads immediately, no intersection observer complexity
-    if (adLoaded || typeof window === 'undefined') return;
-
-    setAdLoaded(true);
-
-    // Initialize AdSense
-    const win = window as Window & { adsbygoogle?: unknown[] };
-    if (!win.adsbygoogle) {
-      win.adsbygoogle = [];
-    }
-
-    // Small delay to let the DOM settle, then load the ad
-    const timer = setTimeout(() => {
-      try {
-        (win.adsbygoogle = win.adsbygoogle || []).push({});
-      } catch (error) {
-        console.log('AdSense loading:', error);
-      }
-    }, 100);
-
-    return () => clearTimeout(timer);
-  }, [adLoaded]);
+  const loadedRef = useRef(false);
 
   // Size configurations
   const sizeConfig = {
@@ -61,6 +37,41 @@ export function SmartAds({ position, size, adSlot }: SmartAdsProps) {
   };
 
   const config = sizeConfig[size];
+
+  useEffect(() => {
+    // Only run once per component instance
+    if (loadedRef.current || typeof window === 'undefined') return;
+
+    loadedRef.current = true;
+
+    const initializeAd = () => {
+      try {
+        // Initialize AdSense array if it doesn't exist
+        const win = window as Window & { adsbygoogle?: unknown[] };
+        win.adsbygoogle = win.adsbygoogle || [];
+
+        console.log('Initializing AdSense ad for slot:', config['data-ad-slot']);
+
+        // Push this specific ad element
+        win.adsbygoogle.push({});
+      } catch (error) {
+        console.error('AdSense initialization failed:', error);
+      }
+    };
+
+    // Wait for AdSense script to be available
+    const checkAdSense = () => {
+      const win = window as Window & { adsbygoogle?: unknown[] };
+      if (win.adsbygoogle) {
+        initializeAd();
+      } else {
+        setTimeout(checkAdSense, 100);
+      }
+    };
+
+    // Start checking after a short delay
+    setTimeout(checkAdSense, 500);
+  }, [config]);
 
   return (
     <div
